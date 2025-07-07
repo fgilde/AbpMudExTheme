@@ -12,7 +12,9 @@
     <!--/ABP:Styles-->
 
     <link href="OnlyFreights.Blazor.Client.styles.css" rel="stylesheet"/>
-
+    @* <link id="mudex-styles" href="_content/MudBlazor.Extensions/mudBlazorExtensions.min.css" rel="stylesheet"> *@
+    <link id="mudex-styles" href="@Assets["_content/MudBlazor.Extensions/mudBlazorExtensions.min.css"]" rel="stylesheet" />
+    <link href="@Assets["_content/MudBlazor/MudBlazor.min.css"]" rel="stylesheet" />
 
     <HeadOutlet @rendermode="new InteractiveWebAssemblyRenderMode(prerender: false)" />
 </head>
@@ -30,7 +32,9 @@
         <Routes @rendermode="new InteractiveWebAssemblyRenderMode(prerender: false)"/>
     </div>
 
-    <!--ABP:Scripts-->
+@* <script src="_content/MudBlazor/MudBlazor.min.js"></script> *@
+    <script src="@Assets["_content/MudBlazor/MudBlazor.min.js"]"></script>
+<!--ABP:Scripts-->
     <script src="global.js"></script>
     <!--/ABP:Scripts-->
 
