@@ -1,0 +1,109 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.BasicTheme": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.2.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.2.1",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "OnlyFreights.Application": {
+      "path": "src/OnlyFreights.Application/OnlyFreights.Application.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.Application.Tests": {
+      "path": "test/OnlyFreights.Application.Tests/OnlyFreights.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "OnlyFreights.Domain.Shared": {
+      "path": "src/OnlyFreights.Domain.Shared/OnlyFreights.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.Application.Contracts": {
+      "path": "src/OnlyFreights.Application.Contracts/OnlyFreights.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.HttpApi": {
+      "path": "src/OnlyFreights.HttpApi/OnlyFreights.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.HttpApi.Client": {
+      "path": "src/OnlyFreights.HttpApi.Client/OnlyFreights.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.EntityFrameworkCore.Tests": {
+      "path": "test/OnlyFreights.EntityFrameworkCore.Tests/OnlyFreights.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "OnlyFreights.EntityFrameworkCore": {
+      "path": "src/OnlyFreights.EntityFrameworkCore/OnlyFreights.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.TestBase": {
+      "path": "test/OnlyFreights.TestBase/OnlyFreights.TestBase.abppkg",
+      "folder": "test"
+    },
+    "OnlyFreights.Domain.Tests": {
+      "path": "test/OnlyFreights.Domain.Tests/OnlyFreights.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "OnlyFreights.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/OnlyFreights.HttpApi.Client.ConsoleTestApp/OnlyFreights.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "OnlyFreights.DbMigrator": {
+      "path": "src/OnlyFreights.DbMigrator/OnlyFreights.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.HttpApi.Host": {
+      "path": "src/OnlyFreights.HttpApi.Host/OnlyFreights.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.Blazor": {
+      "path": "src/OnlyFreights.Blazor/OnlyFreights.Blazor.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.Blazor.Client": {
+      "path": "src/OnlyFreights.Blazor.Client/OnlyFreights.Blazor.Client.abppkg",
+      "folder": "src"
+    },
+    "OnlyFreights.Domain": {
+      "path": "src/OnlyFreights.Domain/OnlyFreights.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

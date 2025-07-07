@@ -1,0 +1,85 @@
+{
+  "id": "99f5ca59-99a7-43a7-8fce-189ab65efd16",
+  "template": "app",
+  "versions": {
+    "AbpFramework": "9.2.1",
+    "AbpStudio": "1.0.2",
+    "TargetDotnetFramework": "net9.0"
+  },
+  "modules": {
+    "OnlyFreights": {
+      "path": "OnlyFreights.abpmdl",
+      "folder": "main"
+    },
+    "SampleModule": {
+      "path": "modules/samplemodule/SampleModule.abpmdl",
+      "folder": "modules"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/abp-studio/run-profiles/Default.abprun.json"
+    }
+  },
+  "options": {
+    "httpRequests": {
+      "ignoredUrls": []
+    }
+  },
+  "creatingStudioConfiguration": {
+    "template": "app",
+    "createdAbpStudioVersion": "1.0.2",
+    "tiered": "false",
+    "runInstallLibs": "true",
+    "runBundling": "false",
+    "useLocalReferences": "false",
+    "multiTenancy": "true",
+    "includeTests": "true",
+    "kubernetesConfiguration": "false",
+    "uiFramework": "blazor",
+    "mobileFramework": "none",
+    "distributedEventBus": "none",
+    "databaseProvider": "ef",
+    "runDbMigrator": "true",
+    "databaseManagementSystem": "sqlserver",
+    "separateTenantSchema": "false",
+    "createInitialMigration": "true",
+    "theme": "basic",
+    "themeStyle": "",
+    "themeMenuPlacement": "",
+    "progressiveWebApp": "false",
+    "runProgressiveWebAppSupport": "false",
+    "publicWebsite": "false",
+    "socialLogin": "false",
+    "selectedLanguages": [
+      "English",
+      "English (United Kingdom)",
+      "简体中文",
+      "Español",
+      "العربية",
+      "हिन्दी",
+      "Português (Brasil)",
+      "Français",
+      "Русский",
+      "Deutsch (Deuthschland)",
+      "Türkçe",
+      "Italiano",
+      "Čeština",
+      "Magyar",
+      "Română (România)",
+      "Svenska",
+      "Suomi",
+      "Slovenčina",
+      "Íslenska",
+      "繁體中文"
+    ],
+    "defaultLanguage": "English",
+    "createCommand": "abp new OnlyFreights -t app --ui-framework blazor --database-provider ef --database-management-system sqlserver --theme basic --without-cms-kit --sample-crud-page --dont-run-bundling --no-social-logins -no-gdpr -no-openiddict-admin-ui -no-audit-logging -no-file-management -no-language-management -no-text-template-management"
+  },
+  "folders": {
+    "items": {
+      "main": {},
+      "modules": {}
+    }
+  }
+}

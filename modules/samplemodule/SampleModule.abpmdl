@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SampleModule.Domain": {
+      "path": "src/SampleModule.Domain/SampleModule.Domain.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.Application.Contracts": {
+      "path": "src/SampleModule.Application.Contracts/SampleModule.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.Application": {
+      "path": "src/SampleModule.Application/SampleModule.Application.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.EntityFrameworkCore": {
+      "path": "src/SampleModule.EntityFrameworkCore/SampleModule.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.HttpApi": {
+      "path": "src/SampleModule.HttpApi/SampleModule.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.HttpApi.Client": {
+      "path": "src/SampleModule.HttpApi.Client/SampleModule.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.TestBase": {
+      "path": "test/SampleModule.TestBase/SampleModule.TestBase.abppkg",
+      "folder": "test"
+    },
+    "SampleModule.EntityFrameworkCore.Tests": {
+      "path": "test/SampleModule.EntityFrameworkCore.Tests/SampleModule.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "SampleModule.Domain.Tests": {
+      "path": "test/SampleModule.Domain.Tests/SampleModule.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "SampleModule.Application.Tests": {
+      "path": "test/SampleModule.Application.Tests/SampleModule.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "SampleModule.Domain.Shared": {
+      "path": "src/SampleModule.Domain.Shared/SampleModule.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "SampleModule.Installer": {
+       "path": "src/SampleModule.Installer/SampleModule.Installer.abppkg",
+       "folder": "src"
+    }
+  }
+}
