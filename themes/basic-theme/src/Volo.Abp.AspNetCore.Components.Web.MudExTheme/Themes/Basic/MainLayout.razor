@@ -1,9 +1,36 @@
 @using MudBlazor.Extensions.Core
-
 @using Color = MudBlazor.Color
 @inherits LayoutComponentBase
+@inject IThemeManager _themeManager
 
-<MudThemeProvider />
+<link href="@Assets["_content/MudBlazor/MudBlazor.min.css"]" rel="stylesheet" />
+<link id="mudex-styles" href="@Assets["_content/MudBlazor.Extensions/mudBlazorExtensions.min.css"]" rel="stylesheet" />
+<link href="@Assets["_content/Volo.Abp.AspNetCore.Components.Web.MudExTheme/MudExTheme.css"]" rel="stylesheet" />
+
+<MudRTLProvider>
+    <MudThemeProvider Theme="_themeManager?.CurrentTheme" />
+    <MudDialogProvider />
+    <MudSnackbarProvider />
+    <MudPopoverProvider />
+
+    <MudLayout>
+        <MudAppBar>
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+            <Branding />
+            <NavToolbar />
+
+        </MudAppBar>
+        @* <MainAppBar /> *@
+        <MainNavMenuDrawer PinnedChanged="Callback" @ref="NavMenuDrawer" @bind-Open="IsDrawerOpen" Elevation="25"/>
+        <MudMainContent>
+            <MudContainer MaxWidth="MaxWidth.False" Class="app-main-container mt-4">
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</MudRTLProvider>
+
+@* <MudThemeProvider />
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -23,13 +50,18 @@
     <MudMainContent>
         @Body
     </MudMainContent>
-</MudLayout>
+</MudLayout> *@
 
 @code {
-    bool _drawerOpen = true;
 
     void DrawerToggle()
     {
-        _drawerOpen = !_drawerOpen;
+        IsDrawerOpen = !IsDrawerOpen;
     }
+
+    private void Callback()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
 }

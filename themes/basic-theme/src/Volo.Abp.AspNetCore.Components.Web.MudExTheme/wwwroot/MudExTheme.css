@@ -1,0 +1,5 @@
+﻿mark {
+    /* Override behavior from ABP global css */
+    background: var(--mud-palette-primary) !important;
+    padding: unset !important;
+}

@@ -46,7 +46,8 @@ public static class ApplicationMenuExtensions
             Parent = parent,
         };
 
-        Console.WriteLine(entry.Text +"=" + entry.Href);
+        if(string.IsNullOrWhiteSpace(entry.Href) && (menuItem.Items == null || !menuItem.Items.Any()))
+            entry.Href = "#";
 
         if (menuItem.Items is not { Count: > 0 })
             return entry;

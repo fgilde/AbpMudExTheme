@@ -16,13 +16,20 @@ public partial class NavMenu : IDisposable
     private TreeViewExpandBehaviour _expandBehaviour;
     private TreeViewMode _viewMode = TreeViewMode.Default;
     
-    [Inject]
-    protected IMenuManager MenuManager { get; set; }
+    [Inject] protected IMenuManager MenuManager { get; set; }
+    [Inject] protected IThemeManager ThemeManager { get; set; }
+    
 
     [Inject]
     protected ApplicationConfigurationChangedService ApplicationConfigurationChangedService { get; set; }
 
     protected ApplicationMenu Menu { get; set; }
+
+    [Parameter] public bool IsMini { get; set; }
+
+    [Parameter] public bool ShowUserCard { get; set; } = true;
+
+    [Parameter] public bool ShowApplicationLogo { get; set; } = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -132,8 +139,9 @@ public partial class NavMenu : IDisposable
     public IEnumerable<NavigationEntry> FindEntriesForUrl(string url = null)
     {
         url = (url ?? NavigationManager.ToBaseRelativePath(NavigationManager.Uri));
+        if (string.IsNullOrEmpty(url)) return [];
         url = Nextended.Core.Extensions.StringExtensions.EnsureStartsWith(url, "/").ToLower();
-        return Entries.Find(e => Nextended.Core.Extensions.StringExtensions.EnsureStartsWith(e.Href,"/").ToLower() == url);
+        return Entries.Find(e => !string.IsNullOrWhiteSpace(e.Href) && Nextended.Core.Extensions.StringExtensions.EnsureStartsWith(e.Href,"/").ToLower() == url);
     }
 
 
@@ -143,5 +151,8 @@ public partial class NavMenu : IDisposable
         return !string.IsNullOrWhiteSpace(entry?.Href);
     }
 
-
+    public string Locale(string s)
+    {
+        return _localizer != null ? _localizer[s ?? ""] : s ?? "";
+    }
 }

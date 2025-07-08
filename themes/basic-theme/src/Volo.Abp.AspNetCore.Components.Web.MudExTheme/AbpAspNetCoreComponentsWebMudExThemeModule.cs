@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using MudBlazor.Extensions;
 using Volo.Abp.AspNetCore.Components.Web.Theming;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Theming;
@@ -22,6 +23,7 @@ public class AbpAspNetCoreComponentsWebMudExThemeModule : AbpModule
             }
         });
         context.Services.AddMudServicesWithExtensions();
-
+        context.Services.AddTransient<IThemeManager, ThemeManager>();
+        context.Services.AddTransient<ThemeManager>();
     }
 }

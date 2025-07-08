@@ -7,6 +7,8 @@ namespace Volo.Abp.AspNetCore.Components.Web.MudExTheme.Themes.Basic;
 public partial class MainLayout : IDisposable
 {
     [Inject] private NavigationManager NavigationManager { get; set; }
+    internal bool IsDrawerOpen;
+    internal MainNavMenuDrawer NavMenuDrawer;
 
     private bool IsCollapseShown { get; set; }
 
