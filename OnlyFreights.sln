@@ -41,17 +41,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlyFreights.Blazor.Client"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "themes", "themes", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme\Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj", "{9F70AEBC-461E-74B1-E4A6-F3FB44AF9B6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.csproj", "{9F70AEBC-461E-74B1-E4A6-F3FB44AF9B6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.Server.BasicTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.Server.BasicTheme\Volo.Abp.AspNetCore.Components.Server.BasicTheme.csproj", "{46E386D6-89CC-93D0-F34B-6D4A44AD5F6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.Server.MudExTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.Server.MudExTheme\Volo.Abp.AspNetCore.Components.Server.MudExTheme.csproj", "{46E386D6-89CC-93D0-F34B-6D4A44AD5F6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.Web.BasicTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.Web.BasicTheme\Volo.Abp.AspNetCore.Components.Web.BasicTheme.csproj", "{AB08E871-CE3B-5DDD-3BFE-63EBFF6E358F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.Web.MudExTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.Web.MudExTheme\Volo.Abp.AspNetCore.Components.Web.MudExTheme.csproj", "{AB08E871-CE3B-5DDD-3BFE-63EBFF6E358F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.Bundling", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.Bundling\Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.Bundling.csproj", "{520A25CD-5C9D-FD00-8DDB-E7FAB7CE7BFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling.csproj", "{520A25CD-5C9D-FD00-8DDB-E7FAB7CE7BFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic", "themes\basic-theme\src\Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic\Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.csproj", "{E3EFB109-41FF-C47F-E6B7-AC187A2759A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.BasicTheme.Installer", "themes\basic-theme\src\Volo.Abp.BasicTheme.Installer\Volo.Abp.BasicTheme.Installer.csproj", "{23F2BAB6-4C7B-9613-A766-B926E26EB4CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.MudExTheme.Installer", "themes\basic-theme\src\Volo.Abp.MudExTheme.Installer\Volo.Abp.MudExTheme.Installer.csproj", "{23F2BAB6-4C7B-9613-A766-B926E26EB4CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

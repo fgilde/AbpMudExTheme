@@ -18,7 +18,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Components.WebAssembly.Theming.Bundling;
-using Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme;
+using Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme;
 using Volo.Abp.SettingManagement.Blazor.WebAssembly;
 using Volo.Abp.FeatureManagement.Blazor.WebAssembly;
 using Volo.Abp.TenantManagement.Blazor.WebAssembly;
@@ -32,7 +32,7 @@ namespace OnlyFreights.Blazor.Client;
     typeof(AbpAutofacWebAssemblyModule),
     typeof(AbpIdentityBlazorWebAssemblyModule),
     typeof(AbpTenantManagementBlazorWebAssemblyModule),
-    typeof(AbpAspNetCoreComponentsWebAssemblyBasicThemeModule),
+    typeof(AbpAspNetCoreComponentsWebAssemblyMudExThemeModule),
     typeof(OnlyFreightsHttpApiClientModule)
 )]
 public class OnlyFreightsBlazorClientModule : AbpModule

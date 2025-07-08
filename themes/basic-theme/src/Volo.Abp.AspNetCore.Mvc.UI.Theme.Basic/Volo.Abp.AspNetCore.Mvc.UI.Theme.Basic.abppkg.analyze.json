@@ -61,7 +61,7 @@
         }
       ],
       "contentType": "abpModule",
-      "name": "AbpAspNetCoreMvcUiBasicThemeModule",
+      "name": "AbpAspNetCoreMvcUiMudExThemeModule",
       "summary": null
     }
   ]

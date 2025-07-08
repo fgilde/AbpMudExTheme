@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <PackageId>Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MudBlazor.Extensions" Version="8.8.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.Theming" Version="9.2.1" />
+    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.WebAssembly" Version="9.2.1" />
+    <ProjectReference Include="..\Volo.Abp.AspNetCore.Components.Web.MudExTheme\Volo.Abp.AspNetCore.Components.Web.MudExTheme.csproj" />
+    <ProjectReference Include="..\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling.csproj" />
+  </ItemGroup>
+</Project>
