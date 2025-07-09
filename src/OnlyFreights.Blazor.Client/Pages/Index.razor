@@ -1,5 +1,35 @@
 ﻿@page "/"
+@using Volo.Abp.AspNetCore.Components.Messages
+@using Volo.Abp.AspNetCore.Components.Notifications
 @inherits OnlyFreightsComponentBase
+@inject IUiNotificationService NotificationService
+@inject IUiMessageService MessageService
+
+
+
+<div class="container">
+    <div class="p-5 text-center">
+        <Button onclick="@(async () => { await NotificationService.Success("Hello, World!"); await NotificationService.Warn("Something went wrong!"); })">
+            Show Notifications!
+        </Button>
+        <hr />
+        <Button onclick="@(() => { MessageService.Info("Hello, World!", "HellO"); })">
+            Show Info!
+        </Button>
+        <Button onclick="@(() => { MessageService.Success("Hello, World!"); })">
+            Show Success!
+        </Button>
+        <Button onclick="@(() => { MessageService.Warn("Hello, World!"); })">
+            Show Warn!
+        </Button>
+        <Button onclick="@(() => { MessageService.Confirm("Hello, World?"); })">
+            Show Confirm!
+        </Button>
+        <Button onclick="@(() => { MessageService.Error("Hello, World?"); })">
+            Show Error!
+        </Button>
+    </div>
+</div>
 
 <div class="row mb-3">
     <div class="col-xl-6 col-12 d-flex">

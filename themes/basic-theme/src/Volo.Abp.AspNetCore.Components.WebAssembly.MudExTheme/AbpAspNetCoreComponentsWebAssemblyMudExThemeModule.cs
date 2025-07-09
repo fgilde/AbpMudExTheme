@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MudBlazor.Extensions;
 using Volo.Abp.AspNetCore.Components.Web;
 using Volo.Abp.AspNetCore.Components.Web.MudExTheme;
+using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Services;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Routing;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Toolbars;
 using Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling;

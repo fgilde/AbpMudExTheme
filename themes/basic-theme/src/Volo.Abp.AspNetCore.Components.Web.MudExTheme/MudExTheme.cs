@@ -1,5 +1,5 @@
 using System;
-using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Themes.Basic;
+using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Themes.MudEx;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Layout;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Theming;
 using Volo.Abp.DependencyInjection;
