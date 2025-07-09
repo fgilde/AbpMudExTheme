@@ -47,7 +47,7 @@
                        ItemTemplate="@(IsMini? MiniItemTemplate : DefaultTemplate)"
                        TreeViewModeToggleComponent="@(_toggleableViewModes?.Contains(ViewMode) == true ? TreeViewModeToggleComponent.ToggleButton : TreeViewModeToggleComponent.None)"
                        ToggleableViewModes="@_toggleableViewModes"
-                       Items="@Entries">
+                       Items="@GetEntries()">
             <ItemContentTemplate>
                 <div style="display: flex; align-items: center; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                     @if (!string.IsNullOrWhiteSpace(context?.Value?.Icon))
@@ -70,8 +70,7 @@
 
     private RenderFragment MiniItemTemplate(TreeViewItemContext<NavigationEntry> context)
     {
-        Console.WriteLine(context.Value.Text);
-        return @<RenderChild>
+        return @<RenderChild Condition="HasAction(context.Value)">
             <MudExIconButton Size="Size.Small" OnClick="@(() => context.TreeView.NodeClick(context.Value))" ToolTip="@context.TreeView.TextFunc(context.Value)" Icon="@context.Value.FindIcon()" Class="ml-1 mt-1"/>
         </RenderChild>;
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using MudBlazor.Extensions.Core.Enums;
+using Nextended.Core.Extensions;
 using Nextended.Core.Types;
 using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Extensions;
 using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Services;
@@ -31,7 +32,7 @@ public partial class NavMenu : IDisposable
 
     [Parameter] public bool ShowUserCard { get; set; } = true;
 
-    [Parameter] public bool ShowApplicationLogo { get; set; } = false;
+    [Parameter] public bool ShowApplicationLogo { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -156,5 +157,12 @@ public partial class NavMenu : IDisposable
     public string Locale(string s)
     {
         return _localizer != null ? _localizer[s ?? ""] : s ?? "";
+    }
+
+    private HashSet<NavigationEntry> GetEntries()
+    {
+        if (IsMini)
+            return Entries.Recursive(e => e.Children).Where(HasAction).ToHashSet();
+        return Entries;
     }
 }
