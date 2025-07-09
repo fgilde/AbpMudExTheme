@@ -36,7 +36,7 @@
     private RenderFragment SettingsButtons()
     {
         return @<div>
-            @if (ThemeManager?.CurrentTheme?.CanPinDrawer == true)
+            @if (ThemeManager?.CurrentTheme?.CanPinDrawer ?? true)
             {
                 <MudToggleIconButton Size="MudBlazor.Size.Small" ToggledSize="MudBlazor.Size.Small" @bind-Toggled="@Pinned" Title="Pin" ToggledTitle="Unpin" Icon="@Icons.Material.Outlined.PushPin" ToggledIcon="@Icons.Material.Filled.PushPin" ToggledColor="@MudBlazor.Color.Warning" />
             }

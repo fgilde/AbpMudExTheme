@@ -20,7 +20,7 @@ public partial class NavMenu : IDisposable
     private TreeViewMode _viewMode = TreeViewMode.Default;
     
     [Inject] protected IMenuManager MenuManager { get; set; }
-    [Inject] protected IThemeManager ThemeManager { get; set; }
+    [Inject] protected IMudThemeManager ThemeManager { get; set; }
     
 
     [Inject]
@@ -143,8 +143,8 @@ public partial class NavMenu : IDisposable
     {
         url = (url ?? NavigationManager.ToBaseRelativePath(NavigationManager.Uri));
         if (string.IsNullOrEmpty(url)) return [];
-        url = Nextended.Core.Extensions.StringExtensions.EnsureStartsWith(url, "/").ToLower();
-        return Entries.Find(e => !string.IsNullOrWhiteSpace(e.Href) && Nextended.Core.Extensions.StringExtensions.EnsureStartsWith(e.Href,"/").ToLower() == url);
+        url = url.EnsureStartsWith("/").ToLower();
+        return Entries.Find(e => !string.IsNullOrWhiteSpace(e.Href) && e.Href.EnsureStartsWith("/").ToLower() == url);
     }
 
 

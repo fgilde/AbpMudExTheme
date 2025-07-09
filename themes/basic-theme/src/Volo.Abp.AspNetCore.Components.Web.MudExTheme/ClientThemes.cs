@@ -143,7 +143,8 @@ public static class ClientThemes
         Typography = DefaultTypography,
         LayoutProperties = GetDefaultLayoutProperties()
     }.SetProperties(
-        t => t.PaletteDark = t.PaletteLight.ToPaletteDark().SetProperties(p => p.AppbarBackground = "#373740"));
+            t => t.PaletteDark = t.PaletteLight.ToPaletteDark().SetProperties(p => p.AppbarBackground = "#373740")
+        );
 
 
     public static ClientTheme LuckyGreen = new ClientTheme()
@@ -192,6 +193,6 @@ public static class ClientThemes
 
     
     
-    public static ClientTheme LastUsedTheme { get; set; } = DefaultTheme;
+    public static ClientTheme LastUsedTheme { get; set; }
 
 }

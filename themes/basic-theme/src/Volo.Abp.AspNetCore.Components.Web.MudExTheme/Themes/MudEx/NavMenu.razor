@@ -4,6 +4,7 @@
 @using Size = MudBlazor.Size
 @inject NavigationManager NavigationManager
 @inject Microsoft.Extensions.Localization.IStringLocalizer<NavMenu> _localizer
+@inherits AbpComponentBase
 
 <div>
     @if (ShowApplicationLogo && !IsMini)
@@ -14,20 +15,6 @@
         <MudDivider Class="mb-2" />
     }
 
-@*     @if (ShowUserCard && User?.Identity?.IsAuthenticated == true && !User.IsGuest())
-    {
-        @if (IsMini)
-        {
-            <div class="mini-avatar">
-                <UserAvatar />
-            </div>
-        }
-        else
-        {
-            <UserCard Logout="Logout" ShowEmail="false" ShowLogout="false" />
-        }
-        <MudDivider Class="mb-2" />
-    } *@
 
     @if (Entries != null)
     {
@@ -38,7 +25,7 @@
                        FilterChipsPlacedRight="true"
                        ExpandOnFilter="true"
                        Parameters="@(new Dictionary<string, object>() { { nameof(ExpandBehaviour), ExpandBehaviour }, { nameof(MudExTreeViewList<NavigationEntry>.RenderHomeLink), false }, { nameof(MudExTreeViewList<NavigationEntry>.BackLinkLabel), "Back" } })"
-                       FilterMode="@(ThemeManager.CurrentTheme?.ShowFilterInDrawer == true && !IsMini && ViewMode != TreeViewMode.Breadcrumb ? PropertyFilterMode.AlwaysVisible : PropertyFilterMode.Disabled)"
+                       FilterMode="@(ThemeManager?.CurrentTheme?.ShowFilterInDrawer ?? true && !IsMini && ViewMode != TreeViewMode.Breadcrumb ? PropertyFilterMode.AlwaysVisible : PropertyFilterMode.Disabled)"
                        FilterBoxStyle="margin:10px;"
                        TextFunc="@(entry => Locale(entry.Text))"
                        Style="margin: 0 10px;"

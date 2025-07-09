@@ -42,7 +42,5 @@ public class AbpAspNetCoreComponentsWebAssemblyMudExThemeModule : AbpModule
         }
 
         context.Services.AddMudServicesWithExtensions();
-        context.Services.AddTransient<IThemeManager, ThemeManager>();
-        context.Services.AddTransient<ThemeManager>();
     }
 }

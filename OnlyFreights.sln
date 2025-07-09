@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Compone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling", "themes\basic-theme\src\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Bundling.csproj", "{520A25CD-5C9D-FD00-8DDB-E7FAB7CE7BFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic", "themes\basic-theme\src\Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic\Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.csproj", "{E3EFB109-41FF-C47F-E6B7-AC187A2759A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.AspNetCore.Mvc.UI.Theme.MudExTheme", "themes\basic-theme\src\Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic\Volo.Abp.AspNetCore.Mvc.UI.Theme.MudExTheme.csproj", "{E3EFB109-41FF-C47F-E6B7-AC187A2759A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volo.Abp.MudExTheme.Installer", "themes\basic-theme\src\Volo.Abp.MudExTheme.Installer\Volo.Abp.MudExTheme.Installer.csproj", "{23F2BAB6-4C7B-9613-A766-B926E26EB4CA}"
 EndProject

@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Volo.Abp.AspNetCore.Components.Server.MudExTheme.Themes.Basic;
+using Volo.Abp.AspNetCore.Components.Server.MudExTheme.Themes.MudEx;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Toolbars;
 
 namespace Volo.Abp.AspNetCore.Components.Server.MudExTheme;

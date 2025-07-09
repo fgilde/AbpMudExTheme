@@ -6,7 +6,7 @@ namespace Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 [ThemeName(Name)]
 public class MudExTheme : ITheme, ITransientDependency
 {
-    public const string Name = "Basic";
+    public const string Name = "MudEx";
 
     public virtual string GetLayout(string name, bool fallbackToDefault = true)
     {

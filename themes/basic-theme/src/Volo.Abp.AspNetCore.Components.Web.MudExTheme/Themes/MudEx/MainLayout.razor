@@ -1,51 +1,31 @@
 @using Color = MudBlazor.Color
-@using MudBlazor.Extensions.Core
 @using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Services
 @inherits LayoutComponentBase
-@inject IThemeManager _themeManager
+@inject IMudThemeManager _themeManager
 
 <link href="@Assets["_content/MudBlazor/MudBlazor.min.css"]" rel="stylesheet" />
 <link id="mudex-styles" href="@Assets["_content/MudBlazor.Extensions/mudBlazorExtensions.min.css"]" rel="stylesheet" />
 <link href="@Assets["_content/Volo.Abp.AspNetCore.Components.Web.MudExTheme/MudExTheme.css"]" rel="stylesheet" />
 
 <MudRTLProvider>
-    <MudThemeProvider Theme="_themeManager?.CurrentTheme" />
-    <MudDialogProvider />
-    <MudSnackbarProvider />
-    <MudPopoverProvider />
+    <MudThemeProvider Theme="_theme"/>
+    <MudDialogProvider/>
+    <MudSnackbarProvider/>
+    <MudPopoverProvider/>
 
     <MudLayout>
-        <MudAppBar>
-            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-            <Branding />
-            <NavToolbar />
-
+        <MudAppBar Style="@_themeManager?.CurrentTheme?.StyleAppBar" Elevation="25">
+            <Branding/>
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())"/>
+            <MudSpacer/>
+            <NavToolbar/>
         </MudAppBar>
-        @* <MainAppBar /> *@
         <MainNavMenuDrawer PinnedChanged="PinnedChanged" @ref="NavMenuDrawer" @bind-Open="IsDrawerOpen" Elevation="25"/>
         <MudMainContent>
-            <MudContainer MaxWidth="MaxWidth.False" Class="app-main-container mt-4">
+            <MudContainer MaxWidth="MaxWidth.False" Class="app-main-container mt-4">                
+                <NavBreadcrumb/>
                 @Body
             </MudContainer>
         </MudMainContent>
     </MudLayout>
 </MudRTLProvider>
-
-
-@code {
-
-    void DrawerToggle()
-    {
-        IsDrawerOpen = !IsDrawerOpen;
-        InvokeAsync(StateHasChanged);
-    }
-
-    private void PinnedChanged()
-    {
-        InvokeAsync(StateHasChanged).ContinueWith(task =>
-        {
-            DrawerToggle(); DrawerToggle();  // 2 calls to Ensure refresh and old state
-        });
-    }
-
-}

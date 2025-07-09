@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Toolbars;
-using Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Themes.Basic;
+using Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.Themes.MudEx;
 using Volo.Abp.DependencyInjection;
 
 namespace Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme;

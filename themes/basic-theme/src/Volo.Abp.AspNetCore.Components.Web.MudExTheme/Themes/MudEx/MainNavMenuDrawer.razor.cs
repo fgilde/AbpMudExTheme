@@ -18,7 +18,7 @@ public partial class MainNavMenuDrawer
     public NavMenu Menu { get; private set; }
 
     [Inject]
-    internal IThemeManager ThemeManager { get; set; }
+    internal IMudThemeManager ThemeManager { get; set; }
 
     [CascadingParameter] 
     internal MainLayout Layout { get; set; }
@@ -69,7 +69,7 @@ public partial class MainNavMenuDrawer
             Variant = Pinned ? DrawerVariant.Mini : DrawerVariant.Temporary;
             ClipMode = Pinned ? DrawerClipMode.Always : DrawerClipMode.Never;
         }
-        else
+        else if(ThemeManager?.CurrentTheme != null)
         {
             Variant = ThemeManager.CurrentTheme.DrawerVariant;
             ClipMode = ThemeManager.CurrentTheme.DrawerClipMode;
