@@ -70,7 +70,8 @@
 
     private RenderFragment MiniItemTemplate(TreeViewItemContext<NavigationEntry> context)
     {
-        return @<RenderChild Condition="@(HasAction(context.Value))">
+        Console.WriteLine(context.Value.Text);
+        return @<RenderChild>
             <MudExIconButton Size="Size.Small" OnClick="@(() => context.TreeView.NodeClick(context.Value))" ToolTip="@context.TreeView.TextFunc(context.Value)" Icon="@context.Value.FindIcon()" Class="ml-1 mt-1"/>
         </RenderChild>;
     }
