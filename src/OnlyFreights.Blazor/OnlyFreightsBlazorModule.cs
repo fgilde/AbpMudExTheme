@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using OnlyFreights.Blazor.Components;
 using OnlyFreights.Blazor.Client;
+using OnlyFreights.Blazor.Services;
 using Volo.Abp;
+using Volo.Abp.AspNetCore.Components.Web.MudExTheme.Services;
 using Volo.Abp.AspNetCore.Components.WebAssembly.WebApp;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.Libs;
@@ -24,6 +27,7 @@ public class OnlyFreightsBlazorModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
+        context.Services.Replace(ServiceDescriptor.Singleton<IMudThemeManager, OnlyFreightThemeManager>());
         //https://github.com/dotnet/aspnetcore/issues/52530
         Configure<RouteOptions>(options =>
         {
