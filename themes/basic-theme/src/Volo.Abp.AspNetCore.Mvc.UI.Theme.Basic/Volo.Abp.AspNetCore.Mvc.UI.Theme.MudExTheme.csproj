@@ -3,14 +3,42 @@
     <TargetFramework>net9.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <AssemblyName>MudExTheme.Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic</AssemblyName>
-    <PackageId>Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic</PackageId>
+    <PackageId>MudEx.Volo.Abp.AspNetCore.Mvc.UI.Theme.MudExTheme</PackageId>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <IsPackable>true</IsPackable>
     <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>MudEx.Volo.Abp.AspNetCore.Mvc.UI.Theme.MudExTheme</Title>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageVersion>0.0.1-prev</PackageVersion>
+    <Authors>fgilde</Authors>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>Git</RepositoryType>
+    <PackageProjectUrl>https://github.com/fgilde/AbpMudExTheme</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/fgilde/AbpMudExTheme</RepositoryUrl>
+    <Description>
+      A Theme for ABP Blazor WebAssembly applications using MudBlazor and MudBlazor.Extensions from https://www.mudex.org.
+    </Description>
+    <Copyright>Copyright © $(Authors) 2020-$([System.DateTime]::Now.Year)</Copyright>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageTags>MudBlazor, ABP, MudEx, MudBlazor.Extensions </PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <OutputPath>..\..\..\..\bin</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\**\*.*" />
   </ItemGroup>

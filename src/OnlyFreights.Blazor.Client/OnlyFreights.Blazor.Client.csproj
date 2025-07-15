@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\OnlyFreights.HttpApi.Client\OnlyFreights.HttpApi.Client.csproj" />
+    <!--<PackageReference Include="MudEx.Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme" Version="0.0.1-prev" />-->
     <ProjectReference Include="..\..\themes\basic-theme\src\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme\Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme.csproj" />
   </ItemGroup>
 

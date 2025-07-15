@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <PackageId>Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme</PackageId>
+    <PackageId>MudEx.Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme</PackageId>
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
-    <Title>${PackageId}</Title>
+    <Title>MudEx.Volo.Abp.AspNetCore.Components.WebAssembly.MudExTheme</Title>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageVersion>0.0.1-prev</PackageVersion>
     <Authors>fgilde</Authors>
