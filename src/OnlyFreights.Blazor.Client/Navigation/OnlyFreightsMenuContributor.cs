@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using MudBlazor;
 using OnlyFreights.Localization;
 using OnlyFreights.Permissions;
 using OnlyFreights.MultiTenancy;
@@ -77,7 +76,7 @@ public class OnlyFreightsMenuContributor : IMenuContributor
             bookStoreMenu.AddItem(new ApplicationMenuItem(
                 "BooksStore.Books",
                 l["Menu:Books"],
-                icon: Icons.Material.Filled.Abc,
+             //   icon: Icons.Material.Filled.Abc,
                 url: "/books"
             ));
         }

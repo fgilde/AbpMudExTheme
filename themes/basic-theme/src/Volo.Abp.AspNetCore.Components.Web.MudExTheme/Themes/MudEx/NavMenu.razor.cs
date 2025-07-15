@@ -134,7 +134,7 @@ public partial class NavMenu : IDisposable
         if(current == null)
             return;
         var url = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
-        SelectedNavEntry = FindEntriesForUrl(url)?.FirstOrDefault();
+        SelectedNavEntry = FindEntriesForUrl(url)?.FirstOrDefault() ?? Entries?.FirstOrDefault();
         if (SelectedNavEntry != null && SelectedNavEntry != current)
             InvokeAsync(StateHasChanged);
     }

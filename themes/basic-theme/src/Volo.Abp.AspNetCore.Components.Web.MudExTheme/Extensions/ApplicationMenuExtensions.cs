@@ -33,7 +33,7 @@ public static class ApplicationMenuExtensions
         };
 
         if(string.IsNullOrWhiteSpace(entry.Href) && (menuItem.Items == null || !menuItem.Items.Any()))
-            entry.Href = "#";
+            entry.Href = "/";
 
         return entry;
     }
